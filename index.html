@@ -12,9 +12,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script src="https://kit.fontawesome.com/c5f154dc0d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<header>
+	<header class="header">
     <div class="header__top"> 
       <div class="header__logo">
         <a id="header__logo__a" href="./index.html"><img src="./media/logo.png" alt="Logo de Les Luthiers"></a>
@@ -38,28 +39,32 @@
 			<a href="https://www.youtube.com/channel/UCp538Jzy_VRFHAPBjyLTqJw" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
 		</div>
 	</header>  
-  <main>
-    <div class="main__div">
+  <main class="main__div">
       <section class="main__div__section">
         <h2>Próximo Show: La Plata | 10 de junio</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.6315192690467!2d-57.95778868518389!3d-34.91569558157806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e6315325b63d%3A0x757e5eafd2c6d778!2sTeatro%20Municipal%20Coliseo%20Podest%C3%A1!5e0!3m2!1ses-419!2ses!4v1654828175860!5m2!1ses-419!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="main__div__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.6315192690467!2d-57.95778868518389!3d-34.91569558157806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e6315325b63d%3A0x757e5eafd2c6d778!2sTeatro%20Municipal%20Coliseo%20Podest%C3%A1!5e0!3m2!1ses-419!2ses!4v1654828175860!5m2!1ses-419!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <h3>Teatro Coliseo Podestá</h3>
         <a href="https://entradauno.com/334-les-luthiers/334?h=d48e913f50e22ad2a28609560a731af418376269" target="_blank">Entradas</a>
       </section>
       <section class="main__div__section">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/SLPaboyok40" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; muted; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="main__div__iframe" width="560" height="315" src="https://www.youtube.com/embed/SLPaboyok40" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; muted; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <h2>Imágenes del show anterior</h2>
       </section>
-    </div>
   </main>
-  <footer>
+  <footer class="footer">
 		<p>Copyright - Todos los derechos reservados | Designed by <a href="mailto: diego.opel@gmail.com">DiegOpDev</a></p>
+    <nav class="footerNavBar">
+      <input type="checkbox" id="check">
+    <label for="check" class="footerNavBar__checkBTN"><i class="fa-solid fa-bars"></i></label>
+    <ul class="navBarUL--hide">
+        <li class="navBarLI--hide"><a href="#">Home</a></li>
+        <li class="navBarLI--hide"><a href="./paginas/integrantes.html">Integrantes</a></li>
+        <li class="navBarLI--hide"><a href="./paginas/instrumentos.html">Instrumentos</a></li>
+        <li class="navBarLI--hide"><a href="./paginas/proximosShows.html">Próximos Shows</a></li>
+        <li class="navBarLI--hide"><a href="./paginas/contacto.html">Contacto</a></li>
+        </li>
+    </ul>
+    </nav>
   </footer>
-  <script>
-    function desplegaMenu() {
-      let desplegado = 0;
-      toggle
-    };
-  </script>
 </body>
 </html>

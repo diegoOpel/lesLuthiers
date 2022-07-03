@@ -12,9 +12,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script src="https://kit.fontawesome.com/c5f154dc0d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<header>
+	<header class="header">
     <div class="header__top"> 
       <div class="header__logo">
         <a id="header__logo__a" href="../index.html"><img src="../media/logo.png" alt="Logo de Les Luthiers"></a>
@@ -38,7 +39,7 @@
 			<a href="https://www.youtube.com/channel/UCp538Jzy_VRFHAPBjyLTqJw" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
 		</div>
 	</header>  
-  <main>
+  <main class="main">
     <section>
       <h2 class="section__title">Deje su mensaje</h2>
        <p class="section__subtitle">Para información, comentarios y contrataciones rellene el formulario</p>
@@ -63,8 +64,20 @@
       </form>		
 	  </section>
   </main>
-  <footer>
+  <footer class="footer">
 		<p>Copyright - Todos los derechos reservados | Designed by <a href="mailto: diego.opel@gmail.com">DiegOpDev</a></p>
+    <nav class="footerNavBar">
+      <input type="checkbox" id="check">
+    <label for="check" class="footerNavBar__checkBTN"><i class="fa-solid fa-bars"></i></label>
+    <ul class="navBarUL--hide">
+        <li class="navBarLI--hide"><a href="../index.html">Home</a></li>
+        <li class="navBarLI--hide"><a href="./integrantes.html">Integrantes</a></li>
+        <li class="navBarLI--hide"><a href="./instrumentos.html">Instrumentos</a></li>
+        <li class="navBarLI--hide"><a href="./proximosShows.html">Próximos Shows</a></li>
+        <li class="navBarLI--hide"><a href="#">Contacto</a></li>
+        </li>
+    </ul>
+    </nav>
   </footer>
 </body>
 </html>
