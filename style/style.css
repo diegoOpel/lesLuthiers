@@ -3,7 +3,9 @@
     padding: 0;
 }
 body {
-    background-color: #161a1d;
+    /* background-color: #161a1d; */
+    background: rgb(29,23,23);
+background: linear-gradient(180deg, rgba(29,23,23,1) 22%, rgba(97,47,47,1) 62%, rgba(173,137,137,1) 100%);
     font-family: 'Lato', sans-serif;
     color: #d3d3d3;
     display: grid;
@@ -14,7 +16,6 @@ body {
 }
 .header {
     grid-area: header;
-    
     top: 0;
     z-index: 10000;
 }
@@ -24,6 +25,8 @@ body {
     flex-wrap: nowrap;
     align-items: center;
     background-color: #d3d3d3;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
 }
 .header__title {
     color: #660708;
@@ -32,13 +35,25 @@ body {
     margin: 0 auto;
     font-family: 'Dancing Script', cursive;
 }
-.header__logo {
-    width: 30%;
-}
+/* .header__logo {
+    ;
+} */
 .header__logo img {
-    width: 70%;
+    width: 50%;
     padding: 0 10px;
+    animation-name: logo;
+    animation-delay: .5ms;
+    animation-duration: 400ms;
+    animation-iteration-count: 3;
+    -webkit-animation-direction: alternate-reverse;
 }
+@keyframes logo {
+    25% {transform: rotate(45deg);}
+    50% {transform: rotate(90deg);}
+    75% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+}
+
 .navBar {
     padding: 10px 0;
     background-color: #66070993;
@@ -296,6 +311,9 @@ body {
 }
 
 @media screen and (max-width: 320px){
+    .header__title {
+        padding-right: 2px;
+    }
     .main__div__iframe {
         width: 95%;
         height: auto;
@@ -319,7 +337,7 @@ body {
     .navBar__redesSociales a, .navBar__redesSociales a:visited {
         color:#d3d3d3;
     }
-    .navBarLI {
+    .navBar {
         display: none;
     }
     .footerNavBar {
@@ -350,15 +368,20 @@ body {
         width: 100%;
         height: 0;
         bottom: 50px;
-        background-color: #161a1d;
+        background-color: #293238;
         text-align: center;
         transition: all .5s;
     }
     .navBarUL--hide li {
         display: none;
         line-height: 10px;
-        margin:  20px 0;
+        margin:  15px 20px;
         transition: all .5s;
+        border-bottom: 2px solid#d3d3d33a;
+        padding-bottom: 5px;
+    }
+    .navBarUL--hide li:first-child{
+        margin-top: 30px;
     }
     .navBarUL--hide li a {
         color:#d3d3d3
