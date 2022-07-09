@@ -3,9 +3,8 @@
     padding: 0;
 }
 body {
-    /* background-color: #161a1d; */
     background: rgb(29,23,23);
-background: linear-gradient(180deg, rgba(29,23,23,1) 22%, rgba(97,47,47,1) 62%, rgba(173,137,137,1) 100%);
+    background: linear-gradient(180deg, rgba(29,23,23,1) 22%, rgba(97,47,47,1) 62%, rgba(173,137,137,1) 100%);
     font-family: 'Lato', sans-serif;
     color: #d3d3d3;
     display: grid;
@@ -35,9 +34,6 @@ background: linear-gradient(180deg, rgba(29,23,23,1) 22%, rgba(97,47,47,1) 62%, 
     margin: 0 auto;
     font-family: 'Dancing Script', cursive;
 }
-/* .header__logo {
-    ;
-} */
 .header__logo img {
     width: 50%;
     padding: 0 10px;
@@ -69,23 +65,23 @@ background: linear-gradient(180deg, rgba(29,23,23,1) 22%, rgba(97,47,47,1) 62%, 
     text-decoration: none;
     font-weight: bold;
     color: #d3d3d3;
-    padding: 10px 5px;
+    padding: 10px 80px;
 }
 .footerNavBar {
     display: none;
 }
 .navBar ul li a:hover {
     background-color: #69666673;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 .navBar__redesSociales {
     position: absolute;
-    right: 5px;
-    top: 5px;
+    right: 10px;
+    top: 10px;
 }
 .navBar__redesSociales a {
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color:#161a1d;
 }
 .navBar__redesSociales a:hover {
@@ -135,7 +131,9 @@ background: linear-gradient(180deg, rgba(29,23,23,1) 22%, rgba(97,47,47,1) 62%, 
     color: #d3d3d3;
 }
 .footer a:hover, main a:hover {
-    color: #868686;
+    /* color: #868686; */
+    transform: scaleY(1.1);
+    transition: all 1s;
 }
 .section__title, .section__subtitle {
     text-align: center;
@@ -192,6 +190,8 @@ background: linear-gradient(180deg, rgba(29,23,23,1) 22%, rgba(97,47,47,1) 62%, 
 #form input[type="submit"]:hover {
     cursor: pointer;
     background-color: #161a1d;
+    transform: scale(1.1);
+    transition: all 1s;
 }
 .main__div__section__article {
     display: flex;
