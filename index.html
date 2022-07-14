@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>Les Luthiers | Home</title>
 	<link rel="icon" type="image/x-icon" href="./media/lesluthiersicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./style/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,57 +15,83 @@
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   <script src="https://kit.fontawesome.com/c5f154dc0d.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="">
 	<header class="header">
-    <div class="header__top"> 
-      <div class="header__logo">
-        <a id="header__logo__a" href="./index.html"><img src="./media/logo.png" alt="Logo de Les Luthiers"></a>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./media/logo.png" alt="Logo Les Luthiers" width="30" height="24" class="d-inline-block align-text-top">
+          Les Luthiers
+        </a>
+        <button class="navbar-toggler navBarHider" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdownIntegrantes" role="button" data-bs-toggle="dropdown" aria-expanded="false">Integrantes</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdownIntegrantes">
+                <li><a class="dropdown-item" href="./paginas/integrantes.html#actuales">Actuales</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="./paginas/integrantes.html#pasados">Pasados</a></li>
+              </ul>
+              </li>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdownInstrumentos" role="button" data-bs-toggle="dropdown" aria-expanded="false">Instrumentos</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdownInstrumentos">
+                <li><a class="dropdown-item" href="./paginas/instrumentos.html#cuerda">Cuerda</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="./paginas/instrumentos.html#viento">Viento</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="./paginas/instrumentos.html#percusion">Percusión</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="./paginas/instrumentos.html#electronicos">Electrónicos</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./paginas/proximosShows.html">Próximos Shows</a></li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./paginas/contacto.html">Contacto</a></li>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="header__title">
-        <h1>Les Luthiers</h1>
-      </div>
-    </div>
-    <nav class="navBar">
-      <ul class="navBarUL">
-        <li class="navBarLI"><a href="#">Home</a></li>
-        <li class="navBarLI"><a href="./paginas/integrantes.html">Integrantes</a></li>
-        <li class="navBarLI"><a href="./paginas/instrumentos.html">Instrumentos</a></li>
-        <li class="navBarLI"><a href="./paginas/proximosShows.html">Próximos Shows</a></li>
-        <li class="navBarLI"><a href="./paginas/contacto.html">Contacto</a></li>
-      </ul>
     </nav>
-		<div class="navBar__redesSociales">
+	</header>  
+  <main class="container main">
+    <div class="navBar__redesSociales">
 			<a href="https://es-es.facebook.com/LesLuthiersOficial" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
       <a href="https://www.instagram.com/lesluthiers_oficial/?hl=es" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
 			<a href="https://www.youtube.com/channel/UCp538Jzy_VRFHAPBjyLTqJw" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
 		</div>
-	</header>  
-  <main class="main__div">
-      <section class="main__div__section">
-        <h2>Próximo Show: La Plata | 10 de junio</h2>
+    <section class="main__div__section col-12 col-md-5">
+      <div class="card text-bg-dark mb-3">
         <iframe class="main__div__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.6315192690467!2d-57.95778868518389!3d-34.91569558157806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e6315325b63d%3A0x757e5eafd2c6d778!2sTeatro%20Municipal%20Coliseo%20Podest%C3%A1!5e0!3m2!1ses-419!2ses!4v1654828175860!5m2!1ses-419!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <h3>Teatro Coliseo Podestá</h3>
-        <a href="https://entradauno.com/334-les-luthiers/334?h=d48e913f50e22ad2a28609560a731af418376269" target="_blank">Entradas</a>
-      </section>
-      <section class="main__div__section">
+        <div class="card-body">
+          <h2 class="card-title">Próximo Show: <br> La Plata | 10 de junio</h2>
+          <h3>Teatro Coliseo Podestá</h3>
+          <a href="https://entradauno.com/334-les-luthiers/334?h=d48e913f50e22ad2a28609560a731af418376269" target="_blank">Entradas</a>
+        </div>
+      </div>     
+    </section>
+    <section class="main__div__section col-12 col-md-5">
+      <div class="card text-bg-dark mb-3" >
         <iframe class="main__div__iframe" width="560" height="315" src="https://www.youtube.com/embed/SLPaboyok40" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; muted; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <h2>Imágenes del show anterior</h2>
-      </section>
+        <div class="card-body">
+          <h2 class="card-title">Imágenes del show anterior</h2>
+        </div>
+      </div> 
+    </section>
   </main>
   <footer class="footer">
 		<p>Copyright - Todos los derechos reservados | Designed by <a href="mailto: diego.opel@gmail.com">DiegOpDev</a></p>
-    <nav class="footerNavBar">
-      <input type="checkbox" id="check">
-    <label for="check" class="footerNavBar__checkBTN"><i class="fa-solid fa-bars"></i></label>
-    <ul class="navBarUL--hide">
-        <li class="navBarLI--hide"><a href="#">Home</a></li>
-        <li class="navBarLI--hide"><a href="./paginas/integrantes.html">Integrantes</a></li>
-        <li class="navBarLI--hide"><a href="./paginas/instrumentos.html">Instrumentos</a></li>
-        <li class="navBarLI--hide"><a href="./paginas/proximosShows.html">Próximos Shows</a></li>
-        <li class="navBarLI--hide"><a href="./paginas/contacto.html">Contacto</a></li>
-        </li>
-    </ul>
-    </nav>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>Les Luthiers | Contacto</title>
 	<link rel="icon" type="image/x-icon" href="../media/lesluthiersicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../style/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,68 +17,89 @@
 </head>
 <body>
 	<header class="header">
-    <div class="header__top"> 
-      <div class="header__logo">
-        <a id="header__logo__a" href="../index.html"><img src="../media/logo.png" alt="Logo de Les Luthiers"></a>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../media/logo.png" alt="Logo Les Luthiers" width="30" height="24" class="d-inline-block align-text-top">
+          Les Luthiers
+        </a>
+        <button class="navbar-toggler navBarHider" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdownIntegrantes" role="button" data-bs-toggle="dropdown" aria-expanded="false">Integrantes</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdownIntegrantes">
+                <li><a class="dropdown-item" href="./integrantes.html#actuales">Actuales</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="./integrantes.html#pasados">Pasados</a></li>
+              </ul>
+              </li>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdownInstrumentos" role="button" data-bs-toggle="dropdown" aria-expanded="false">Instrumentos</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdownInstrumentos">
+                <li><a class="dropdown-item" href="./instrumentos.html#cuerda">Cuerda</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="./instrumentos.html#viento">Viento</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="./instrumentos.html#percusion">Percusión</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="./instrumentos.html#electronicos">Electrónicos</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./proximosShows.html">Próximos Shows</a></li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Contacto</a></li>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="header__title">
-        <h1>Les Luthiers</h1>
-      </div>
-    </div>
-    <nav class="navBar">
-      <ul class="navBarUL">
-        <li class="navBarLI"><a href="../index.html">Home</a></li>
-        <li class="navBarLI"><a href="./integrantes.html">Integrantes</a></li>
-        <li class="navBarLI"><a href="./instrumentos.html">Instrumentos</a></li>
-        <li class="navBarLI"><a href="./proximosShows.html">Próximos Shows</a></li>
-        <li class="navBarLI"><a href="#">Contacto</a></li>
-      </ul>
     </nav>
-		<div class="navBar__redesSociales">
+	</header>  
+  <main class="main container-fluid">
+    <div class="navBar__redesSociales">
 			<a href="https://es-es.facebook.com/LesLuthiersOficial" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
       <a href="https://www.instagram.com/lesluthiers_oficial/?hl=es" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
 			<a href="https://www.youtube.com/channel/UCp538Jzy_VRFHAPBjyLTqJw" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
 		</div>
-	</header>  
-  <main class="main">
-    <section>
+    <section class="main__div__section wide card text-bg-light mb-3">
       <h2 class="section__title">Deje su mensaje</h2>
-       <p class="section__subtitle">Para información, comentarios y contrataciones rellene el formulario</p>
-	    <form class="main__div__section" id="form" action="./contact.php">
-        <fieldset class="form__fieldset">
-          <label for="nameSurname">Nombre y Apellido</label>
-          <input type="text" id="nameSurname" name="nameSurname" placeholder="Nombre y Apellido" required>
-        </fieldset>
-        <fieldset class="form__fieldset">
-          <label for="telephone">Teléfono</label>
-          <input type="tel" id="telephone" name="telephone" placeholder="Teléfono" required>
-        </fieldset>
-        <fieldset class="form__fieldset">
-          <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" placeholder="E-mail" required>
-        </fieldset>
-        <fieldset class="form__fieldset">
-          <label for="messaje">Escriba su mensaje en el recuadro</label>
-          <textarea name="messaje" id="messaje" placeholder="Escriba aqui su mensaje" cols="30" rows="10"></textarea>
-        </fieldset>
-        <input type="submit" value="Enviar">
-      </form>		
-	  </section>
+       <p class="section__subtitle text-center">Para información, comentarios y contrataciones rellene el formulario</p>
+      <form class="container-fluid ">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="nameSurname" placeholder="Nombre y Apellido" required>
+        <label for="nameSurname" class="form-label">Nombre y Apellido</label>
+      </div>
+      <div class="form-floating mb-3">        
+        <input type="tel" class="form-control" id="telephone" placeholder="Teléfono" required>
+        <label for="telephone" class="form-label">Teléfono</label>
+      </div>
+      <div class="form-floating mb-3">        
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+        <label for="exampleFormControlInput1" class="form-label">Email</label>
+      </div>
+      <div class="form-floating mb-3">        
+        <textarea class="form-control" id="messaje" rows="3" placeholder="Escriba aqui su mensaje."  required></textarea>
+        <label for="messaje" class="form-label">Escriba su mensaje en el recuadro</label>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary btn-dark col-12" type="submit">Enviar</button>
+      </div>
+    </form>
+    </section>
+    </div> 
   </main>
   <footer class="footer">
 		<p>Copyright - Todos los derechos reservados | Designed by <a href="mailto: diego.opel@gmail.com">DiegOpDev</a></p>
-    <nav class="footerNavBar">
-      <input type="checkbox" id="check">
-    <label for="check" class="footerNavBar__checkBTN"><i class="fa-solid fa-bars"></i></label>
-    <ul class="navBarUL--hide">
-        <li class="navBarLI--hide"><a href="../index.html">Home</a></li>
-        <li class="navBarLI--hide"><a href="./integrantes.html">Integrantes</a></li>
-        <li class="navBarLI--hide"><a href="./instrumentos.html">Instrumentos</a></li>
-        <li class="navBarLI--hide"><a href="./proximosShows.html">Próximos Shows</a></li>
-        <li class="navBarLI--hide"><a href="#">Contacto</a></li>
-        </li>
-    </ul>
-    </nav>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 </body>
 </html>
