@@ -63,38 +63,35 @@
       </div>
     </nav>
 	</header>  
-  <main class="main container-fluid">
+  <main class="main" id="contacto">
     <div class="navBar__redesSociales">
 			<a href="https://es-es.facebook.com/LesLuthiersOficial" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
       <a href="https://www.instagram.com/lesluthiers_oficial/?hl=es" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
 			<a href="https://www.youtube.com/channel/UCp538Jzy_VRFHAPBjyLTqJw" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
 		</div>
-    <section class="main__div__section wide card text-bg-light mb-3">
+    <section>
       <h2 class="section__title">Deje su mensaje</h2>
-       <p class="section__subtitle text-center">Para información, comentarios y contrataciones rellene el formulario</p>
-      <form class="container-fluid ">
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="nameSurname" placeholder="Nombre y Apellido" required>
-        <label for="nameSurname" class="form-label">Nombre y Apellido</label>
-      </div>
-      <div class="form-floating mb-3">        
-        <input type="tel" class="form-control" id="telephone" placeholder="Teléfono" required>
-        <label for="telephone" class="form-label">Teléfono</label>
-      </div>
-      <div class="form-floating mb-3">        
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
-        <label for="exampleFormControlInput1" class="form-label">Email</label>
-      </div>
-      <div class="form-floating mb-3">        
-        <textarea class="form-control" id="messaje" rows="3" placeholder="Escriba aqui su mensaje."  required></textarea>
-        <label for="messaje" class="form-label">Escriba su mensaje en el recuadro</label>
-      </div>
-      <div class="col-12">
-        <button class="btn btn-primary btn-dark col-12" type="submit">Enviar</button>
-      </div>
-    </form>
-    </section>
-    </div> 
+       <p class="section__subtitle">Para información, comentarios y contrataciones rellene el formulario</p>
+	    <form class="main__div__section" id="form" action="./contact.php">
+        <fieldset class="form__fieldset">
+          <label for="nameSurname">Nombre y Apellido</label>
+          <input type="text" id="nameSurname" name="nameSurname" placeholder="Nombre y Apellido" required>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <label for="telephone">Teléfono</label>
+          <input type="tel" id="telephone" name="telephone" placeholder="Teléfono" required>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="E-mail" required>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <label for="messaje">Escriba su mensaje en el recuadro</label>
+          <textarea name="messaje" id="messaje" placeholder="Escriba aqui su mensaje" cols="30" rows="5"></textarea>
+        </fieldset>
+        <input type="submit" value="Enviar">
+      </form>		
+	  </section>
   </main>
   <footer class="footer">
 		<p>Copyright - Todos los derechos reservados | Designed by <a href="mailto: diego.opel@gmail.com">DiegOpDev</a></p>
