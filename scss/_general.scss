@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: map-get($colores,"background-color");
+    font-family: $main-font_family;
+    color: map-get($colores,"main-contrast-color");
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    &__p {
+        text-align: left;
+    }
+    &__div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        margin-top: 10vh;
+        &__section {
+            text-align: center;
+            margin: 10px 10px;
+            background-color: #696666;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px map-get($colores,"background-color-secondary");
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            h2, h3 {
+                margin: 10px auto;
+                width: 100%; 
+            }
+            a {
+                background-color: map-get($colores,"background-color-secondary");
+                color: map-get($colores,"main-contrast-color");
+                font-weight: bold;
+                text-decoration: none;
+                display: block;
+                padding: 10px auto;
+                border: 2px solid map-get($colores,"color-cuaternary");
+                border-radius: 5px;
+                margin-bottom: 10px;
+                width: 100%;
+                &:hover {
+                    background-color: map-get($colores,"color-anchor");
+                }
+            }
+            &__title, &__subtitle {
+                text-align: center;
+                margin-top: 10px;
+            }
+            &__article {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                width: 30%;
+                border: 2px solid map-get($colores,"main-contrast-color");
+                border-radius: 10px;
+                background-color: map-get($colores,"color-tertiary");
+                align-items: center;
+                margin: 5px;
+                &__img {
+                    border: 2px solid map-get($colores,"color-tertiary");
+                    border-radius: 10px;
+                    background-color: map-get($colores,"main-contrast-color");
+                    width: 100%;
+                    img {
+                        width: 100%;
+                        border-radius: 5px;
+                    }
+                }
+                &__info {
+                    padding: 5px;
+                    p {
+                        padding: 10px;
+                        text-align: left;
+                    }
+                } 
+            }
+        }
+    }
+}
+.main {
+    a {
+        text-decoration: none;
+        color: map-get($colores,"main-contrast-color");
+        &:hover {
+            transform: scaleY(1.1);
+            transition: all 1s;
+        }
+    }
+    p {
+        margin: 10px 20px;
+    }
+}
+.navbar-brand img {
+        animation-name: logo;
+        animation-duration: .5s;
+        animation-iteration-count: 3;
+        -webkit-animation-direction: alternate-reverse;
+}
+.navBar__redesSociales {
+        position: fixed;
+        right: 20px;
+        top: 10px;
+        z-index: 9999;
+        a {
+            text-decoration: none;
+            font-size: 2rem;
+            color: map-get($colores,"color-tertiary");
+            &:hover {
+                color: map-get($colores,"background-color-secondary");
+            };
+        }
+}
+@keyframes logo {
+    25% {transform: rotate(45deg);}
+    50% {transform: rotate(90deg);}
+    75% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+}
+.home {
+    width: 45vw;
+}
+.footer {
+    padding: 10px 10px;
+    text-align: end;
+    background-color: map-get($colores,"color-anchor");
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    a {
+        text-decoration: none;
+        color: map-get($colores,"main-contrast-color");
+        &:hover {
+            transform: scaleY(1.1);
+            transition: all 1s;
+        }  
+    }
+}
+.backToTopArrow {
+    position: fixed;
+    right: 10px;
+    bottom: 25px;
+    i {
+        color: map-get($colores,"main-contrast-color");
+        font-size: 3.5rem;   
+        &:hover {
+            opacity: 70%;
+        }
+    }
+}
+.organizador {
+    display: flex;
+    flex-direction: row;
+    max-width: 100vw;
+    margin-top: 50px;
+}
+.shows {
+    flex-direction: column;
+    width: 70vw;
+    img {
+        margin: 10px;
+        border-radius: 5px;
+        width: 60vw;
+    }
+    &__a {
+        display: block;
+        max-width: 95%;
+        margin-top: 10px;
+    }
+
+}
+@media screen and (max-width: 425px){ /* modifique el max-width porque se adapta mejor */
+    .main__div__iframe {
+        width: 95%;
+        height: auto;
+    }
+    .navBar__redesSociales {
+        background-color: map-get($colores,"background-color-secondary");
+        opacity: 70%;
+        position: fixed;
+        right: 0;
+        top: 50vh;
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        margin-right: 0;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        a {
+            color:map-get($colores,"main-contrast-color");
+            &:visited {
+                color:map-get($colores,"main-contrast-color");
+            } 
+        }
+    }
+    .main__div {
+        margin-top: 0%;
+        &__section {
+            width: 95%;
+            &__article {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+        }
+    }
+    .organizador {
+        margin-top: auto;
+    }
+    .header {
+        position: sticky;
+    }
+}
+@media screen and (max-width: 768px) {
+    .navBar__redesSociales {
+        background-color: map-get($colores,"background-color-secondary");
+        opacity: 70%;
+        position: fixed;
+        right: 0;
+        top: 50vh;
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        margin-right: 0;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        a {
+            color:map-get($colores,"main-contrast-color");
+            &:visited {
+                color:map-get($colores,"main-contrast-color");
+            } 
+        }
+    }
+}
