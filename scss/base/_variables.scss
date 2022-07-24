@@ -4,6 +4,11 @@ $colores: (
     "color-tertiary": #161a1d,
     "color-cuaternary": #0b090a,
     "color-anchor": #66070993,
-    "main-contrast-color": #d3d3d3
+    "main-contrast-color": #ffffff
 );
 $main-font_family: 'Lato', sans-serif;
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: wrap;
+}

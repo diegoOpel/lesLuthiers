@@ -17,18 +17,14 @@ header {
     z-index: 1000;
 }
 .main{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    @include flex(column);
     justify-content: center;
     align-items: center;
     &__p {
         text-align: left;
     }
     &__div {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        @include flex(row);
         align-content: center;
         margin-top: 10vh;
         &__section {
@@ -39,9 +35,7 @@ header {
             border: 2px solid black;
             border-radius: 10px;
             box-shadow: 2px 2px 5px map-get($colores,"background-color-secondary");
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+            @include flex(row);
             justify-content: center;
             h2, h3 {
                 margin: 10px auto;
@@ -67,9 +61,7 @@ header {
                 margin-top: 10px;
             }
             &__article {
-                display: flex;
-                flex-direction: column;
-                flex-wrap: wrap;
+                @include flex(column);
                 width: 30%;
                 border: 2px solid map-get($colores,"main-contrast-color");
                 border-radius: 10px;
@@ -168,8 +160,7 @@ header {
     }
 }
 .organizador {
-    display: flex;
-    flex-direction: row;
+    @include flex(row);
     max-width: 100vw;
     margin-top: 50px;
 }
@@ -199,8 +190,7 @@ header {
         position: fixed;
         right: 0;
         top: 50vh;
-        display: flex;
-        flex-direction: column;
+        @include flex(column);
         padding: 5px;
         margin-right: 0;
         border-top-left-radius: 5px;
@@ -237,8 +227,7 @@ header {
         position: fixed;
         right: 0;
         top: 50vh;
-        display: flex;
-        flex-direction: column;
+        @include flex(column);
         padding: 5px;
         margin-right: 0;
         border-top-left-radius: 5px;
