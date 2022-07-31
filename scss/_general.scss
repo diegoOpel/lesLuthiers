@@ -20,8 +20,19 @@ header {
     @include flex(column);
     justify-content: center;
     align-items: center;
+    h2:target {
+        padding-top: 10vh;
+    }
     &__p {
         text-align: left;
+        margin: auto 20px;
+        a {
+            text-decoration:underline;
+            color: map-get($colores , "main-contrast-color" );
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
     &__div {
         @include flex(row);
@@ -30,16 +41,19 @@ header {
         &__section {
             text-align: center;
             margin: 10px 10px;
-            background-color: #696666;
+            background-color: #554e4e;
             padding: 10px;
             border: 2px solid black;
-            border-radius: 10px;
+            border-radius: 5px;
             box-shadow: 2px 2px 5px map-get($colores,"background-color-secondary");
             @include flex(row);
             justify-content: center;
+            &:target {
+                padding-top: 10vh;
+            }
             h2, h3 {
                 margin: 10px auto;
-                width: 100%; 
+                width: 100%;
             }
             a {
                 background-color: map-get($colores,"background-color-secondary");
@@ -64,13 +78,13 @@ header {
                 @include flex(column);
                 width: 30%;
                 border: 2px solid map-get($colores,"main-contrast-color");
-                border-radius: 10px;
+                border-radius: 5px;
                 background-color: map-get($colores,"color-tertiary");
                 align-items: center;
                 margin: 5px;
                 &__img {
                     border: 2px solid map-get($colores,"color-tertiary");
-                    border-radius: 10px;
+                    border-radius: 5px;
                     background-color: map-get($colores,"main-contrast-color");
                     width: 100%;
                     img {
@@ -90,23 +104,36 @@ header {
     }
 }
 .main {
-    a {
-        text-decoration: none;
-        color: map-get($colores,"main-contrast-color");
-        &:hover {
-            transform: scaleY(1.1);
-            transition: all 1s;
+    div {
+        section {
+            a {
+                background-color: map-get($colores, "background-color-secondary");
+                color: map-get($colores, "main-contrast-color");
+                padding: 2.5px 0 2.5px 2.5px;
+                width: 90%;
+                &:hover {
+                        cursor: pointer;
+                        background-color: map-get($colores, "main-contrast-color");
+                        color: map-get($colores, "background-color-secondary");
+                        transform: scale(1.1);
+                        transition: all 1s;
+                }
+            }
+            p {
+                margin: 10px 20px;
+            }
         }
     }
-    p {
-        margin: 10px 20px;
-    }
 }
-.navbar-brand img {
+.navbar {
+    position: sticky;
+    top: 0;
+    &-brand img {
         animation-name: logo;
         animation-duration: .5s;
         animation-iteration-count: 3;
         -webkit-animation-direction: alternate-reverse;
+    }
 }
 .navBar__redesSociales {
         position: fixed;
@@ -179,10 +206,15 @@ header {
     }
 
 }
+
 @media screen and (max-width: 425px){ /* modifique el max-width porque se adapta mejor */
-    .main__div__iframe {
-        width: 95%;
-        height: auto;
+    .main__div{
+        img {
+            width: 95%;
+        }
+        &__iframe {
+            width: 95%;
+        }
     }
     .navBar__redesSociales {
         background-color: map-get($colores,"background-color-secondary");
@@ -239,4 +271,5 @@ header {
             } 
         }
     }
+
 }
