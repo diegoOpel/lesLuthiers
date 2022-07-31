@@ -3,6 +3,7 @@ $nameSurname = $_POST ['nameSurname'];
 $telephone = $_POST ['telephone'];
 $email = $_POST ['email'];
 $messaje = $_POST ['messaje'];
+$header = "Content-Type: text/plain"; 
 
 $mensaje = "Este mensaje fue enviado por: " . $nameSurname . ",\r\n";
 $mensaje .= "Su teléfono es: " . $telephone . ",\r\n";
