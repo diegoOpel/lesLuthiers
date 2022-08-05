@@ -1,0 +1,45 @@
+@media screen and (max-width: 425px){ /* modifique el max-width porque se adapta mejor */
+    .main__div{
+        img {
+            width: 95%;
+        }
+        &__iframe {
+            width: 95%;
+        }
+    }
+    .navBar__redesSociales {
+        background-color: map-get($colores,"background-color-secondary");
+        opacity: 70%;
+        position: fixed;
+        right: 0;
+        top: 50vh;
+        @include flex(column);
+        padding: 5px;
+        margin-right: 0;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        a {
+            color:map-get($colores,"main-contrast-color");
+            &:visited {
+                color:map-get($colores,"main-contrast-color");
+            } 
+        }
+    }
+    .main__div {
+        margin-top: 0%;
+        &__section {
+            width: 95%;
+            &__article {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+        }
+    }
+    .organizador {
+        margin-top: auto;
+    }
+    .header {
+        position: sticky;
+    }
+}

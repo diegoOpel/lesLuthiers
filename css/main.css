@@ -187,6 +187,25 @@ header {
     max-width: 95%;
     margin-top: 10px; }
 
+@media screen and (max-width: 768px) {
+  .navBar__redesSociales {
+    background-color: #660708;
+    opacity: 70%;
+    position: fixed;
+    right: 0;
+    top: 50vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin-right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px; }
+    .navBar__redesSociales a {
+      color: #ffffff; }
+      .navBar__redesSociales a:visited {
+        color: #ffffff; } }
+
 @media screen and (max-width: 425px) {
   /* modifique el max-width porque se adapta mejor */
   .main__div img {
@@ -222,25 +241,6 @@ header {
     margin-top: auto; }
   .header {
     position: sticky; } }
-
-@media screen and (max-width: 768px) {
-  .navBar__redesSociales {
-    background-color: #660708;
-    opacity: 70%;
-    position: fixed;
-    right: 0;
-    top: 50vh;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 5px;
-    margin-right: 0;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px; }
-    .navBar__redesSociales a {
-      color: #ffffff; }
-      .navBar__redesSociales a:visited {
-        color: #ffffff; } }
 
 #contacto {
   margin-top: 10vh; }
